@@ -42,9 +42,4 @@ export const CARD_PRESETS: Record<string, CardDimensions> = {
     height: 91.3,
     thickness: 0.6,
   },
-  doubleSleeved: {
-    width: 57,
-    height: 92,
-    thickness: 0.7,
-  },
 };

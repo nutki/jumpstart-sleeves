@@ -129,7 +129,7 @@ const SleeveSelector: React.FC = () => {
   return (
     <div className="sleeve-selector">
       <div className="controls no-print">
-        <h1>MTG Jumpstart Sleeve Printer</h1>
+        <h1>Jumpstart Sleeve Printer</h1>
 
         <section className="dimension-selector">
           <h2>Card Dimensions</h2>
@@ -182,7 +182,7 @@ const SleeveSelector: React.FC = () => {
                 />
               </label>
               <label>
-                Thickness (mm):
+                Card thickness (mm):
                 <input
                   type="number"
                   step="0.1"
@@ -200,7 +200,7 @@ const SleeveSelector: React.FC = () => {
         </section>
 
         <section className="theme-selector">
-          <h2>Select Themes ({selectedThemes.size} selected)</h2>
+          <h2>Select Themes</h2>
           <div className="print-options">
             <label className="checkbox-label">
               <input
@@ -208,7 +208,7 @@ const SleeveSelector: React.FC = () => {
                 checked={withImage}
                 onChange={(e) => setWithImage(e.target.checked)}
               />
-              Include theme images on sleeves
+              Include theme images
             </label>
             <label className="checkbox-label">
               <input
@@ -228,7 +228,7 @@ const SleeveSelector: React.FC = () => {
                     }
                 }}
               />
-              Include card list on sleeves
+              Include card list
             </label>
             <label className="checkbox-label">
               <input
@@ -236,7 +236,7 @@ const SleeveSelector: React.FC = () => {
                 checked={withCollectorCode}
                 onChange={(e) => setWithCollectorCode(e.target.checked)}
               />
-              Include collector code (set-number-variant)
+              Include collector code
             </label>
           </div>
           
