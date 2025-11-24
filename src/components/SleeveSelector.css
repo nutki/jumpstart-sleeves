@@ -1,0 +1,305 @@
+.sleeve-selector {
+  min-height: 100vh;
+}
+
+.controls {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.controls h1 {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.controls h2 {
+  color: #555;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.controls section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+/* Dimension Selector */
+.preset-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.preset-buttons button {
+  padding: 0.5rem 1rem;
+  border: 2px solid #ddd;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+  color: black
+}
+
+.preset-buttons button:hover {
+  border-color: #4a90e2;
+  background: #f0f8ff;
+}
+
+.preset-buttons button.active {
+  border-color: #4a90e2;
+  background: #4a90e2;
+  color: white;
+}
+
+.custom-dimensions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.custom-dimensions label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.custom-dimensions input {
+  padding: 0.4rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100px;
+}
+
+/* Theme Selector */
+.print-options {
+  margin-bottom: 1rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
+
+/* Set Tabs */
+.set-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ddd;
+}
+
+.set-tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: transparent;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.2s;
+  margin-bottom: -2px;
+}
+
+.set-tab:hover {
+  color: #333;
+  background: #f5f5f5;
+}
+
+.set-tab.active {
+  color: #4a90e2;
+  border-bottom-color: #4a90e2;
+  background: #f0f8ff;
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: .3rem;
+}
+
+.theme-card {
+    display: flex;
+    align-items: flex-start;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: white;
+  position: relative;
+  color: black
+}
+
+.theme-card:hover {
+  background: #ccc;
+}
+
+.theme-card.selected {
+  background: #f0f8ff;
+}
+.theme-card.selected:hover {
+  background: #4a90e2;
+}
+
+.theme-name {
+  font-weight: 600;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.theme-checkbox {
+  text-align: center;
+}
+
+.theme-checkbox input {
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
+
+/* Select All Container */
+.select-all-container {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+/* Print Controls */
+.print-controls {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.print-button {
+  padding: 0.75rem 1.5rem;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.print-button:hover:not(:disabled) {
+  background: #357abd;
+}
+
+.print-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.clear-button {
+    padding: 0.75rem 1.5rem;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-left: 1rem;
+}
+
+.clear-button:hover:not(:disabled) {
+    background: #c82333;
+}
+
+.clear-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.print-controls .info {
+  margin-top: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Print Area */
+.print-area {
+    margin: 0 3mm;
+  display: flex;
+flex-wrap: wrap;
+gap: 0;
+justify-content: left;
+align-items: flex-start;
+}
+
+/* Sleeve Container */
+.sleeve-container {
+  margin: 0;
+  padding: 10mm 0;
+display: flex;
+align-items: flex-start;
+}
+
+.sleeve-svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .sleeve-container {
+    page-break-inside: avoid;
+  }
+
+  .sleeve-svg {
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+    @top-left { content: none; }
+    @top-center { content: none; }
+    @top-right { content: none; }
+    @bottom-left { content: none; }
+    @bottom-center { content: none; }
+    @bottom-right { content: none; }
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Screen preview of print area */
+@media screen {
+  .print-area {
+    display: flex;
+    max-width: 210mm;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fafafa;
+    border: 1px solid #ddd;
+  }
+}

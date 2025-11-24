@@ -1,0 +1,11 @@
+.App {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
