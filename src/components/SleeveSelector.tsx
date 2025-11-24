@@ -44,7 +44,7 @@ Array.from(variantGroups.values())
 
 const SleeveSelector: React.FC = () => {
   const [selectedThemes, setSelectedThemes] = useState<Set<string>>(new Set());
-  const [selectedPreset, setSelectedPreset] = useState<string>('unsleeved');
+  const [selectedPreset, setSelectedPreset] = useState<string>('sleeved');
   const [customDimensions, setCustomDimensions] = useState<CardDimensions>(
     CARD_PRESETS.unsleeved
   );
@@ -276,8 +276,8 @@ const SleeveSelector: React.FC = () => {
                     <span
                       className="theme-variant"
                       title={
-                        (uniqueCardsForThemeVariant.get(theme.id)?.join('\n')) ||
-                        'No unique cards'
+                        ('Unique cards in this variant:\n' + uniqueCardsForThemeVariant.get(theme.id)?.join('\n')) ||
+                        'No unique cards in this variant'
                       }
                       aria-label={`Variant ${theme.variant} unique cards`}
                     >
