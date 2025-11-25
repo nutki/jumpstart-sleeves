@@ -9,3 +9,10 @@
   width: 100%;
 }
 
+/* Ensure elements marked no-print are hidden when printing */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+

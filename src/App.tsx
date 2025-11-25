@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <SleeveSelector />
-      <footer style={{
+      <footer className="no-print" style={{
         marginTop: '2rem',
         padding: '1rem',
         textAlign: 'center',
